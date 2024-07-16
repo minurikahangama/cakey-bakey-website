@@ -1,0 +1,205 @@
+body{
+    background: url(cake-images/payment.jpg);
+}
+.header .cart-icon i {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+  
+}
+
+.header .cart-icon i:hover {
+    color: rgb(226, 17, 86);
+   
+   
+}
+.container{
+    margin-top: 17vh;
+}
+
+.container h1{
+    text-shadow: 2px 2px 0 var(--card-color),-2px -2px 0 var(--card-color),-2px 2px 0 var(--card-color),2px -2px 0 var(--card-color);
+    text-align: center;
+    color: #af75fc;
+    text-transform: uppercase;
+    padding: 3.5rem 0;
+    font-size: 4rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    width: 50%;
+    margin-left: 30%;
+}
+
+.buttons button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    width: 50%;
+}
+.buttons .btn{
+    padding: 10px 5px;
+    justify-content: center;
+}
+.active{
+    color: white;
+    background-color: red;
+}
+
+.delivery-card,
+.pickup-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    width: 50%;
+    margin-left: 30%;
+}
+
+.delivery-card:hover,
+.pickup-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.options-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 40vh; */
+   
+}
+
+.card {
+    background-color:var(--card-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s, transform 0.3s;
+    cursor: pointer;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    color:#230d41;
+    
+    
+    
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.card i {
+    margin-right: 10px;
+    padding: 2px 2px;
+}
+ h2{
+    text-shadow: 2px 2px 0 var(--card-color),-2px -2px 0 var(--card-color),-2px 2px 0 var(--card-color),2px -2px 0 var(--card-color);
+    text-align: center;
+    color: #35037a;
+    text-transform: uppercase;
+    padding: 3.5rem 0;
+    font-size: 3rem;
+}
+.ordered-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: #230d41;
+    font-size: 20px;
+}
+
+.item-card {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid purple;
+    border-radius: 5px;
+    text-align: center;
+   background-color: #af75fc;
+}
+
+.order-summary {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.summary-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 50%;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.summary-item span {
+    font-weight: bold;
+}
+
+.summary-total {
+    margin-top: 15px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    color: red;
+}
+
+.summary-total span {
+    font-size: 20px;
+}
+.order-summary h3{
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 800;
+    color: #230d41;
+}
+.btn{
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+/* Styles for the edit address form */
+.container #edit-address-form {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#address-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#address-form button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#address-form button[type="submit"]:hover {
+    background-color: #0056b3;
+}

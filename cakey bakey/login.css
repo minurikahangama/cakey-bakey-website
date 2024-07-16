@@ -1,0 +1,137 @@
+:root{
+    --main-color:#00c9a5;
+    --nav-color:#00afa5;
+    --bg-color:#c3c5cc;
+    --black:#2f4858;
+    --card-color:#c0dbea;
+    --border:.1rem solid var(--card-color);
+    --box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s ease-in-out;
+    scroll-behavior: smooth;
+    scroll-padding-top: 16vh;
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden ;
+}
+
+body{
+    background:url(cake-images/login.webp);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.btn{
+    display: inline-block;
+    background-color:var(--main-color) ;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    width: 100%;
+    height: 25px;
+    
+}
+
+.btn:hover{
+    background-color: rgb(226, 17, 86);
+    letter-spacing: .1rem;
+}
+
+.wrapper{
+    width: 420px;
+    background: rgb(240, 240, 247);
+    color: #e91eb6;
+    border-radius: 10px;
+    padding: 30px 20px;
+}
+
+.wrapper h1{
+    font-size: 40px;
+    text-align: center;
+}
+
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 25px;
+    /* background: salmon; */
+    margin: 30px 0;
+}
+
+.input-box input{
+    width: 100%;
+    height: 50%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid rgb(245, 152, 152);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #18030f;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: #f779ec;
+}
+
+.input-box i{
+    position: absolute;
+    right: 20px;
+    top: 60%;
+    transform:translateY(-50%) ;
+    font-size: 15px;
+}
+
+.wrapper .remember-forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size:10.5px ;
+    margin: 15px 5px 10px;
+}
+
+.remember-forgot a{
+    color: #f07ae6;
+    text-decoration: none;
+
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+
+.wrapper .register-link{
+    font-size: 10.5px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+.register-link p a{
+    color: #e648be;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.register-link p a:hover{
+    text-decoration: underline;
+    color: blue;
+}

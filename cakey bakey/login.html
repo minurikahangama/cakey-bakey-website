@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/cb516eddc9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <form action="login.php" method="POST" id="loginForm">
+            <h1>Login</h1>
+            <div class="input-box" id="username">
+                <input type="text" placeholder="username" name="username" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <br>
+            <div class="input-box" id="password">
+              <input type="password" placeholder="password" name="password" required>
+              <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div class="remember-forgot">
+               <p> <input type="checkbox">Remember me  </p>
+                    <a href="#">Forgot Password</a>
+            </div>
+            
+           <button class="btn" type="submit" id="loginBtn"> Login</button>
+           
+           
+           <div class="register-link">
+            <p>
+                Don't have an account? <a href="register.html">Register</a>
+            </p>
+           </div>
+        </form>
+    </div>
+</body>
+</html>

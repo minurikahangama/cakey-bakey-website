@@ -1,0 +1,153 @@
+:root{
+    --main-color:#00c9a5;
+    --nav-color:#00afa5;
+    --bg-color:#c3c5cc;
+    --black:#2f4858;
+    --card-color:#c0dbea;
+    --border:.1rem solid var(--card-color);
+    --box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s ease-in-out;
+    scroll-behavior: smooth;
+    scroll-padding-top: 16vh;
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden ;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+.blue-berry {
+    height: 85vh; /* You can adjust this value as needed */
+    padding-top: 80px; /* Add padding to create space for the header */
+    box-sizing: border-box; /* Include padding in the height calculation */
+}
+
+.blue-berry .wrapper .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.blue-berry .wrapper .container .img {
+    margin-top: 20px;
+}
+
+h3{
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(214, 62, 181);
+}
+h4{
+    
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 800;
+    color: rgb(121, 69, 95);
+}
+.recipe-card {
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    width: 350px;
+    padding: 20px;
+    border: 1px solid #ccc;
+   transform-origin:top center ;
+   transition: 0.5s;
+}
+
+.recipe-card:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    background-color: #d0eee9;
+   
+   
+    
+}
+
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    font-size:15px;
+}
+
+.recipe-info > div {
+    margin-bottom: 10px;
+}
+
+.label {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.value {
+    margin-left: 5px;
+
+}
+
+.blue-berry .content .receipe{
+    padding: 2rem 2rem;
+    text-align: left;
+    justify-content: left;
+    font-size: 2rem;
+}
+
+.receipe p{
+    padding: 30px 20px;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: #2f4858;
+
+}
+
+.step-1 .list{
+    padding: 2rem 0;
+    line-height: 3rem;
+    font-size: 2rem;
+    color:var(--black);
+}
+
+
+.receipe .step-1 .p1,
+.receipe .step-1 .p2,
+.receipe .step-1 .p3,
+.receipe .step-1 .p4 {
+    font-size: 2.6rem;
+    color: rgb(153, 18, 18);
+    margin-bottom: 20px;
+}
+
+
+
+.receipe .step-1 .p1,
+.receipe .step-1 .p2,
+.receipe .step-1 .p3,
+.receipe .step-1 .p4 {
+    font: weight 800px;;
+}
+
+
+.receipe .step-1 .p1,
+.receipe .step-1 .p2,
+.receipe .step-1 .p3,
+.receipe .step-1 .p4 h5{
+    font-size: 2.5rem;
+}

@@ -1,0 +1,314 @@
+:root{
+    --main-color:#00c9a5;
+    --nav-color:#00afa5;
+    --bg-color:#c3c5cc;
+    --black:#2f4858;
+    --card-color:#c0dbea;
+    --border:.1rem solid var(--card-color);
+    --box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: all 0.5s ease-in-out;
+    scroll-behavior: smooth;
+    scroll-padding-top: 16vh;
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden ;
+}
+
+
+section{
+    padding: 2rem 7%;
+}
+.btn{
+    display: inline-block;
+    background-color:var(--main-color) ;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    
+}
+
+.btn:hover{
+    background-color: rgb(226, 17, 86);
+    letter-spacing: .1rem;
+}
+
+.title{
+    text-shadow: 2px 2px 0 var(--card-color),-2px -2px 0 var(--card-color),-2px 2px 0 var(--card-color),2px -2px 0 var(--card-color);
+    text-align: center;
+    color: #c7b2e2;
+    text-transform: uppercase;
+    padding: 3.5rem 0;
+    font-size: 4rem;
+}
+.title span{
+    color:var(--main-color)
+
+}
+/* 1rem=10px */
+.header{
+    background-color: var(--nav-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:  3.5rem 7%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right:0 ;
+    height: 15vh;
+    /* z-index: 1000;*/
+
+}
+.header .logo img{
+    height: 8rem;
+    border-radius: 50%;
+   
+}
+.header .navbar a{
+    color:#fff;
+    font-size: 2rem;
+    margin: 0 1rem; 
+}
+
+.header .navbar a:hover{
+    color:rgb(226, 17, 86);
+    border-top:.3rem solid var(--black);
+    border-bottom: .3rem solid var(--black);
+
+}
+
+.header .icons { 
+    display: flex;
+
+}
+
+.header .icons div{
+    color: #fff;
+    cursor: pointer;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.header .icons .menu-icon{
+    display: none;
+}
+.header .icons div:hover{
+    color: rgb(226, 17, 86);
+    border-top:.3rem solid var(--black);
+    border-bottom: .3rem solid var(--black);
+
+}
+
+.header .search-form{
+    display: flex;
+    position: absolute;
+    top: 120%;
+    right: -100%;
+    width: 30rem;
+    height: 3.5rem;
+    background-color: #fff;
+    text-transform: none;
+}
+.header .search-form.active{
+    right: 10%;
+}
+
+.header .search-form input{
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    color: var(--black);
+
+}
+
+.header .search-form label {
+    color: var(--black);
+    font-size: 15px;
+    padding-right: 1.3rem;
+    padding: 12px 12px;
+    cursor: pointer;
+}
+
+
+.header .search-form label:hover{
+    color: rgb(226, 17, 86);
+}
+
+
+.header .cart-items-container{
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 25rem;
+    background-color: #fff;
+    /* height: 80vh; */
+    /* border: solid 1px black; */
+    padding: 0.8rem;
+    
+}
+.header .cart-items-container a{
+    width: 100%;
+    text-align: center;
+}
+
+.header .cart-items-container.active{
+    right: 7px;
+    
+}
+.header .cart-items-container .cart-item img{
+    height: 20%;
+    width: 35%;
+    padding: 2rem;
+    
+    
+
+}
+
+.header .cart-items-container .cart-item {
+    display: flex ;
+    align-items: center;
+    margin: 2rem 0;
+    border: solid 1px black;
+    position: relative;
+    font-size: 1.5rem;
+
+}
+
+.header .cart-items-container .cart-item span{
+    position: absolute;
+    top:0;
+    right: 4%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--black);
+}
+
+.header .cart-items-container .cart-item span:hover{
+    color: red;
+    font-size: 2rem;
+}
+
+.header .cart-items-container .cart-item  .content .price{
+    color: rgb(226, 17, 86);
+    font-size: 1.5rem;
+
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    padding-top: 15vh;
+    background-color:var(--bg-color);
+}
+
+
+h2{
+    color: #2f4858;
+    font-size: 40px;
+    font-weight: 800;
+    justify-content: center;
+    text-align: center;
+}
+
+
+h3{
+    color: #0ae5f5;
+    font-size: 20px;
+    font-weight: 800;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.cart-items-container-wrapper {
+    max-height: 300px; /* Limit the maximum height */
+    overflow-y: auto; /* Enable vertical scroll */
+    padding-right: 15px; /* Add padding to avoid cutting off scrollbar */
+}
+.cart-items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20px, 1fr)); /* Adjust the width of the grid */
+    gap: 20px; /* Add gap between grid items */
+    padding: 20px; /* Add padding to the container */
+    background-color: #eaee10;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+}
+
+.cart-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px; /* Add padding to each item */
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+}
+
+.cart-item img {
+    width: 10%; /* Adjust image width */
+    border-radius: 10px; /* Add border radius to the image */
+    margin-bottom: 10px; /* Add margin at the bottom of the image */
+}
+
+.cart-item .content {
+    text-align: center; /* Center the text content */
+}
+
+.cart-item .title {
+    font-size: 1.2rem; /* Adjust title font size */
+    font-weight: bold;
+    margin-bottom: 5px; /* Add margin at the bottom of the title */
+}
+
+.cart-item .price {
+    color: rgb(226, 17, 86);
+    font-size: 2rem; /* Adjust price font size */
+}
+.cart-item i{
+    font-size: 2rem;
+}
+.btn {
+    background-color: var(--black);
+    color: #fff;
+    font-size: 3rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: rgb(226, 17, 86);
+}
+.cart-item .fa-times {
+    color: red; /* Set the color to red */
+    cursor: pointer; /* Set cursor to pointer */
+    margin-left: auto; /* Align to the right */
+    font-size: 1.5rem; /* Adjust the font size */
+}
+
+.cart-item .fa-times:hover {
+    color: darkred; /* Change color on hover */
+}

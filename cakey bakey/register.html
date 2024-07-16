@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="login.css">
+    <script src="https://kit.fontawesome.com/cb516eddc9.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url(cake-images/register.jpg); /* Replace 'background.jpg' with the path to your image */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .wrapper {
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the opacity as needed */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-right: 10%;
+        }
+  </style>
+</head>
+<body>
+
+   
+    </script>
+    <div class="wrapper">
+        <form action="register.php" method="POST"  id="registerForm">
+            <h1>Register to Cakey Bakey</h1>
+            <div class="input-box">
+                <input type="text" placeholder=" Enter Your Username"  name="username" required>
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder=" Enter Your Email" name="email" required>
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder=" Enter Your Contact Number" name="contact" required>
+                <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder=" Enter Your Address" name="address" required>
+                <i class="fa-solid fa-location-pin"></i>
+            </div>
+        
+            <div class="input-box">
+              <input type="password" placeholder="Enter Your Password" name="password" required>
+              <i class="fa-solid fa-lock"></i>
+            </div>
+
+            <div class="input-box">
+                <input type="password" placeholder="Confirm Your Password" name="cpassword" required>
+                <i class="fa-solid fa-lock"></i>
+              </div>
+
+           
+           <button class="btn" type="submit">Register</button>
+           <!-- <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("registerForm").addEventListener("submit", function(event) {
+                    event.preventDefault(); // Prevent form submission
+                    
+                    // Redirect to login.html
+                    window.location.href = "login.html";
+                });
+            });
+        </script> -->
+        
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="payment.css">
+    <script src="https://kit.fontawesome.com/cb516eddc9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo"><img src="cake-images/Capture.PNG"></a>
+       <nav class="navbar">
+        <a href="index.php#home">Home</a>
+        <a href="index.php#cakes">Cakes</a>
+        <a href="index.php#cheese-cakes">Cheesecakes</a>
+        <a href="index.php#new-arrivals">New Arrivals</a>
+        <a href="index.php#receipe">Receipes</a>
+        <a href="cart_items.php">Cart Items</a>
+        <a href="index.php#about">About</a>
+        <a href="index.php#review">Review</a>
+        <a href="index.php#contact">Contact</a>
+       </nav>
+
+       <div class="icons">
+        <div class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div class="menu">
+            <a href="order.php" class="cart-icon" onclick="redirectToProfile()">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+        <div class="menu-icon"><i class="fa-solid fa-bars"></i></div>
+        <div class="profile"><i class="fa-solid fa-user"></i></div>
+       </div>
+
+       <div class="search-form">
+        <input type="search" name="search" id="search-box" placeholder="search here...">
+        <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
+       </div>
+       
+       <div class="cart-items-container">
+        </div>
+        </header>
+       
+            <div class="payment-container">
+                <h1>Select Payment Method</h1>
+                <form action="#" method="post">
+                    <div class="payment-method">
+                        <input type="radio" id="card" name="payment_method" value="card" checked onclick="showCardDetails()">
+                        <label for="card">Credit/Debit Card</label>
+                    </div>
+                    <div class="payment-method">
+                        <input type="radio" id="cash" name="payment_method" value="cash" onclick="hideCardDetails()">
+                        <label for="cash">Cash on Delivery</label>
+                    </div>
+                    <div id="card-details" style="display: none;">
+                        <!-- Card details form fields -->
+                        <label for="card_number">Card Number:</label>
+                        <input type="text" id="card_number" name="card_number" placeholder="Enter card number">
+                        <label for="expiry_date">Expiry Date:</label>
+                        <input type="text" id="expiry_date" name="expiry_date" placeholder="MM/YY">
+                        <label for="cvv">CVV:</label>
+                        <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                    </div>
+                    <button type="submit" id="confirm-order-btn"> Place Order</button>
+                </form>
+                <div id="order-success-msg" style="display: none;">
+        <p>Your Order is successfully placed</p>
+    </div>
+                </div>
+                 <p class="important">We ensure that your payment details are protected and save with us.<br>
+                    Enjoy your order.<br>
+                    Come back again!</p>
+              
+   
+                 <script>
+                    document.addEventListener("DOMContentLoaded", function() {
+                        function showCardDetails() {
+                            document.getElementById('card-details').style.display = 'block';
+                        }
+                
+                        function hideCardDetails() {
+                            document.getElementById('card-details').style.display = 'none';
+                        }
+                
+                        // Get the radio buttons
+                        var cardRadio = document.getElementById("card");
+                        var cashRadio = document.getElementById("cash");
+                
+                        // Add event listeners to the radio buttons
+                        cardRadio.addEventListener("click", showCardDetails);
+                        cashRadio.addEventListener("click", hideCardDetails);
+                
+                        // Logic to handle order confirmation
+                        document.getElementById("confirm-order-btn").addEventListener("click", function(event) {
+                            event.preventDefault(); // Prevent the form from submitting
+                            
+                            // Get the selected payment method
+                            var paymentMethod;
+                            if (cardRadio.checked) {
+                                paymentMethod = "Credit/Debit Card";
+                            } else if (cashRadio.checked) {
+                                paymentMethod = "Cash on Delivery";
+                            }
+                
+                            // Display alert message with payment method
+                            alert("Your cake order is placed successfully using " + paymentMethod + ".");
+                        });
+                    });
+                </script>
+                
+
+           
+        </body>
+        </html>
+        
+
